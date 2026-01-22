@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live City Forecasts</title>
+</head>
+
+<body>
+    <h1> ☁️ Weather Forecast Center </h1>
+    
+
+    <div>
+        <h2>🔎 Search Controls </h2>
+        <form onsubmit="return false">
+            <label for="city">📍Enter City Name: </label>
+            <input type="text" name="city" id="cityInput" placeholder="e.g Karachi">
+            <button type="button" id="getWeather"> 🚀Get Forecast</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div id="resultSection" hidden>
+        <h2>📊 Current Conditions</h2>
+        <table>
+            <tr>
+                <td > 
+                    <span id="weatherIcon"> </span> 
+                    <!-- <img src="" alt="WeatherIcon" id="weatherIcon"> -->
+                </td>
+
+                <td>
+                    <ul>
+                        <li><strong>🏙️ Location:</strong> <span id="displayCity"></span>  <span id="displayCountry"></span></li>
+                        <li><strong>🌡️ Temperature:</strong> <span id="displayTemp"></span>  </li>
+                        <li><strong>🌤️ Condition:</strong> <span id="displayCondition"></span></li>
+                        <li><strong>💧 Humidity:</strong> <span id="displayHumidity"></span> </li>
+                        <li><strong>💨 Wind Speed:</strong> <span id="displayWindSpeed"></span></li>
+                        <li><strong>⏰ Local Time</strong>: <span id="displayLocalTime"></span></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+    <div>
+        <h2> 📜 Search History</h2>
+        <em> ♻️Re-entering a city updates the timestamp below: </em>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th> 📍City</th>
+                    <th> 🌡️ Temperature</th>
+                    <th> 🌈Status</th>
+                    <th> ⏱️Last Viewed</th>
+                </tr>
+            </thead>
+            <tbody id="historyTableBody">
+                <tr>
+                    <td colspan="4" > 📭 No history yet...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <p><small>&COPY; Mohib Sheikh 2026 | All rights reserved</small></p>
+<script src="./script.js"></script>
+
+</body>
+</html>
